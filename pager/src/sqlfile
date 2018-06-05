@@ -1,0 +1,50 @@
+/*
+SQLyog Ultimate v12.5.0 (64 bit)
+MySQL - 5.6.11 : Database - imooc
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`imooc` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `imooc`;
+
+/*Table structure for table `t_student` */
+
+DROP TABLE IF EXISTS `t_student`;
+
+CREATE TABLE `t_student` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `stu_name` varchar(16) NOT NULL,
+  `gender` int(11) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `address` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+/*Data for the table `t_student` */
+
+insert  into `t_student`(`id`,`stu_name`,`gender`,`age`,`address`) values 
+(1,'王小军',1,17,'北京市东城区'),
+(2,'李雷雷',1,16,'北京市朝阳区'),
+(3,'张静',2,16,'北京市昌平区'),
+(4,'王晓萌',2,17,'北京市顺义区'),
+(5,'韩梅梅',2,16,'北京市朝阳区'),
+(6,'李小军',1,17,'北京市海淀区'),
+(7,'成龙',1,16,'北京市石景山区'),
+(8,'李海飞',2,16,'北京市海淀区'),
+(9,'罗红',2,16,'北京市朝阳区'),
+(10,'孙海杰',1,16,'北京市石景山区'),
+(11,'王海龙',1,16,'北京市东城区');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
